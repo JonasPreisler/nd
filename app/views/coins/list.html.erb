@@ -1,0 +1,27 @@
+<table class="table table-hover table-bordered">
+  <thead>
+    <tr>
+      <th>Rank</th>
+      <th>Name</th>
+      <th>Symbol</th>
+      <th>Price</th>
+      <th>1hr</th>
+      <th>24hrs</th>
+      <th>7d</th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @coins.each do |coin| %>
+      <tr>
+	    <td><%= coin ["rank"] %></td>
+	    <td><%= coin ["name"] %></td>
+	    <td><%= coin ["symbol"] %></td>
+	    <td>$<%= coin ["price_usd"] %></td>
+	    <td>$<%= coin ["percent_change_1h"] %>%</td>
+	    <td>$<%= coin ["percent_change_24h"] %>%</td>
+	    <td>$<%= coin ["percent_change_7d"] %>%</td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
