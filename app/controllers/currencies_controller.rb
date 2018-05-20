@@ -8,6 +8,7 @@ class CurrenciesController < ApplicationController
     @uri = URI(@url)
     @response = Net::HTTP.get(@uri)
     @currency = JSON.parse(@response)
+    @currency = Currency.all
   end
 
   def show
