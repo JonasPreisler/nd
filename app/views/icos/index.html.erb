@@ -3,8 +3,7 @@
 <br />
 
 <% @icos.each do |ico| %>
-<div class="row">
-    <div class="col-sm-6 col-md-3">
+    <div class="col-md-3 col-xs-6">
       <div class="thumbnail">
         <%= link_to (image_tag ico.logo.url(:small)), ico %>
         <div class="caption">
@@ -31,5 +30,4 @@
         </div>
       </div>
     </div>
-  </div>
 <% end %>

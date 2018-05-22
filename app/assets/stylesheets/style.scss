@@ -35,10 +35,6 @@ body {
 	background-color: white;
 }
 
-.col-md-3 {
-	width: 20%;
-}
-
 .progress-bar {
 	background-color: #5169f4;
 }
@@ -211,4 +207,12 @@ a {
 		width: 100%;
 		margin-top: 20px;
 	}
+}
+
+/* hide on mobile */
+
+@media (max-width: 992px) {
+  .hide-mobile {
+    display: none;
+  }
 }
