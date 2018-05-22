@@ -8,7 +8,7 @@
       <%= link_to (image_tag ico.logo.url(:small)), ico %>
       <div class="caption">
         <ul class="list-group">
-          <li class="list-group-item-2"><h4 style="font-size:16px;"><%= ico.name %></h4></li>
+          <li class="list-group-item-2"><h4 style="font-size:16px;"><%= link_to ico.name, ico %></h4></li>
           <li class="list-group-item-2" style="font-size:12px;"><%= ico.tagline %></li>
         </ul>
         Amount raised:
