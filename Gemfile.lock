@@ -100,6 +100,8 @@ GEM
     erubi (1.7.1)
     execjs (2.7.0)
     ffi (1.9.23)
+    friendly_id (5.1.0)
+      activerecord (>= 4.0.0)
     globalid (0.4.1)
       activesupport (>= 4.2.0)
     httparty (0.16.2)
@@ -250,6 +252,7 @@ DEPENDENCIES
   coffee-rails (~> 4.2)
   country_select
   devise (~> 4.4, >= 4.4.3)
+  friendly_id (~> 5.1.0)
   httparty (~> 0.16.2)
   jbuilder (~> 2.5)
   jquery-rails

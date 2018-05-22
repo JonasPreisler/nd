@@ -11,9 +11,9 @@ class IcosController < ApplicationController
   # GET /icos/1.json
   def show
     @icos = Ico.all.order('created_at DESC')
+    @ico = Ico.friendly.find(params[:id])
     @random_ico = Ico.where.not(id: @ico).order("RANDOM()").first
     @random_ico2 = Ico.where.not(id: @ico).order("RANDOM()").second
-    @random_ico3 = Ico.where.not(id: @ico).order("RANDOM()").third
   end
 
   # GET /icos/new
@@ -68,7 +68,7 @@ class IcosController < ApplicationController
   private
     # Use callbacks to share common setup or constraints between actions.
     def set_ico
-      @ico = Ico.find(params[:id])
+      @ico = Ico.friendly.find(params[:id])
     end
 
     # Never trust parameters from the scary internet, only allow the white list through.
