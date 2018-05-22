@@ -11,6 +11,9 @@ class IcosController < ApplicationController
   # GET /icos/1.json
   def show
     @icos = Ico.all.order('created_at DESC')
+    @random_ico = Ico.where.not(id: @ico).order("RANDOM()").first
+    @random_ico2 = Ico.where.not(id: @ico).order("RANDOM()").second
+    @random_ico3 = Ico.where.not(id: @ico).order("RANDOM()").third
   end
 
   # GET /icos/new
