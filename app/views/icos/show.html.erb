@@ -26,7 +26,7 @@
       <li class="list-group-item">
         <div class="row">
           <div class="col-md-6">
-            <strong>Website:</strong> www.<%= @ico.website %>
+            <strong>Website:</strong> <%= link_to @ico.website, @ico.website, target: :_blank %>
           </div>
           <div class="col-md-6">
             <strong>Token Price:</strong> $<%= @ico.price %>
