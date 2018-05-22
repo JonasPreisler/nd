@@ -1,0 +1,85 @@
+<div class="container" id="ico-form">
+  <div class="image"></div>
+  <div class="frm">
+      <h1>Add ICO</h1>
+        <%= form_for @ico, html: { multipart: true } do |form| %>
+          <% if ico.errors.any? %>
+            <div id="error_explanation">
+              <h2><%= pluralize(ico.errors.count, "error") %> prohibited this ico from being saved:</h2>
+
+              <ul>
+              <% ico.errors.full_messages.each do |message| %>
+                <li><%= message %></li>
+              <% end %>
+              </ul>
+            </div>
+          <% end %>
+
+          <div class="field">
+            <%= form.text_field :name, placeholder: "Currency name", class: 'form-control' %>
+          </div>
+
+          <br />
+
+          <div class="field">
+            <%= form.text_field :tagline, placeholder: "Tagline (up to 50 characters)", :maxlength => 50, class: 'form-control' %>
+          </div>
+
+          <br />
+
+          <div class="field">
+            <%= form.text_area :description, placeholder: "Description", class: 'form-control' %>
+          </div>
+
+          <br />
+
+          <div class="input-group">
+            <span class="input-group-addon" id="basic-addon1" aria-describedby="basic-addon1">$</span>
+            <%= form.text_field :price, placeholder: "Price pr token", class: 'form-control' %>
+          </div>
+
+          <br />
+
+          <div class="field">
+            <%= form.label :Launchdate_of_ICO %><br />
+            <%= form.datetime_select :launchdate, placeholder: "ICO launch date", class: 'form-control' %>
+          </div>
+
+          <br />
+
+          <div class="field">
+            <%= form.label :country %><br />
+            <%= form.country_select :country, priority_countries: ["US", "GB", "DE", "CN", "JP"], placeholder: "Country", class: 'form-control' %>
+          </div>
+
+          <br />
+
+          <div class="input-group">
+            <span class="input-group-addon" id="basic-addon3" aria-describedby="basic-addon3">https://</span>
+            <%= form.text_field :website, placeholder: "yourwebsite.com", class: 'form-control' %>
+          </div>
+
+          <br />
+
+          <div class="input-group">
+            <span class="input-group-addon" id="basic-addon1" aria-describedby="basic-addon1">$</span>
+            <%= form.text_field :goal, placeholder: "Crowdsource goal", class: 'form-control' %>
+          </div>
+
+          <br />
+          <div class="input-group">
+            <%= form.label :logo %><br />
+            <%= form.file_field :logo %>
+            <%= form.hidden_field :logo_cache %>
+          </div>
+
+          <br />
+
+          <div class="actions">
+            <%= form.submit "Create ICO", class: 'btn btn-primary' %>
+          </div>
+        <% end %>
+      </form>
+  </div>
+</div>
+

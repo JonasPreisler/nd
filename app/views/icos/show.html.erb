@@ -1,0 +1,99 @@
+<div class="row">
+  <div class="col-xs-6 col-md-3">
+    Other stuff here.
+  </div>
+  <div class="col-xs-12 col-md-8">
+    <div class="row">
+      <div class="col-md-4"><%= image_tag @ico.logo.url(:thumb) %></div>
+      <div class="col-md-8"><h1><%= @ico.name %></h1></div>
+    </div>
+    <br />
+    <ul class="list-group">
+      <li class="list-group-item">
+        <div class="row">
+          <div class="col-md-6">
+            <strong>Website:</strong> <%= @ico.website %>
+          </div>
+          <div class="col-md-6">
+            <strong>Token Price:</strong> $<%= @ico.price %>
+          </div>
+        </div>
+      </li>
+      <li class="list-group-item">
+        <div class="row">
+          <div class="col-md-6">
+            <strong>Launchdate:</strong> <%= @ico.launchdate %>
+          </div>
+          <div class="col-md-6">
+            <strong>Country:</strong> <%= @ico.country %>  
+          </div>
+        </div>
+      </li>
+      <li class="list-group-item">
+        <div class="row">
+          <div class="col-md-6">
+            <strong>Goal:</strong> <%= @ico.goal %>
+          </div>
+          <div class="col-md-6">
+            <strong>Something:</strong> Something
+          </div>
+        </div>
+      </li>
+      <li class="list-group-item">
+        <strong>Description:</strong><br /><%= @ico.description %>
+      </li>
+    </ul>
+        
+
+      </div>
+  </div>
+</div>
+<div class="row">
+  <div class="col-xs-6 col-md-3">
+    Other stuff here.
+  </div>
+  <div class="col-xs-12 col-md-8">
+    <br />
+    <br />
+
+    <div class="panel panel-default">
+      <div class="panel-heading" style="background-color:white;color:#1c1c1c;"><strong>Newest ICOs</strong></div>
+    </div>
+
+    <% @icos.each do |ico| %>
+      <div class="col-sm-6 col-md-4">
+        <div class="thumbnail">
+          <%= link_to (image_tag ico.logo.url(:small)), ico %>
+          <div class="caption">
+            <ul class="list-group">
+              <li class="list-group-item-2"><h4 style="font-size:16px;"><%= ico.name %></h4></li>
+              <li class="list-group-item-2" style="font-size:12px;"><%= ico.tagline %></li>
+            </ul>
+            Amount raised:
+            <div class="progress">
+              <div class="progress-bar" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 60%;">
+                $26,432
+            </div>
+            </div>
+          </div>
+          <div class="panel-footer">
+            <div class="row">
+              <div class="col-xs-8 col-sm-6">
+                &#9889; rating
+              </div>
+              <div class="col-xs-4 col-sm-6">
+                <%= link_to "More", ico %>
+              </div>
+            </div>                  
+          </div>
+        </div>
+      </div>
+    <% end %>
+
+
+
+  </div>
+</div>
+
+<p id="notice"><%= notice %></p>
+

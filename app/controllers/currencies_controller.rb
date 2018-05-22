@@ -11,6 +11,10 @@ class CurrenciesController < ApplicationController
     @currency = Currency.all
   end
 
+  def new
+    @currency = Currency.new
+  end
+
   def show
     @currencies = Currency.all
     require 'net/http'

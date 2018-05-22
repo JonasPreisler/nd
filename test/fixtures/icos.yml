@@ -1,0 +1,19 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  name: MyString
+  description: MyText
+  price: 9.99
+  launch: 2018-05-21 17:15:32
+  country: 
+  website: MyString
+  goal: 9.99
+
+two:
+  name: MyString
+  description: MyText
+  price: 9.99
+  launch: 2018-05-21 17:15:32
+  country: 
+  website: MyString
+  goal: 9.99

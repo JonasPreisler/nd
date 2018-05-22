@@ -8,6 +8,7 @@
       <th>1hr</th>
       <th>24hrs</th>
       <th>7d</th>
+      <th>Market Cap</th>
     </tr>
   </thead>
 
@@ -18,9 +19,10 @@
 	    <td><%= coin ["name"] %></td>
 	    <td><%= coin ["symbol"] %></td>
 	    <td>$<%= coin ["price_usd"] %></td>
-	    <td>$<%= coin ["percent_change_1h"] %>%</td>
-	    <td>$<%= coin ["percent_change_24h"] %>%</td>
-	    <td>$<%= coin ["percent_change_7d"] %>%</td>
+	    <td><%= coin ["percent_change_1h"] %>%</td>
+	    <td><%= coin ["percent_change_24h"] %>%</td>
+	    <td><%= coin ["percent_change_7d"] %>%</td>
+      <td>$<%= coin ["market_cap_usd"] %></td>
       </tr>
     <% end %>
   </tbody>

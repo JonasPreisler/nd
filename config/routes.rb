@@ -1,7 +1,9 @@
 Rails.application.routes.draw do
+  post '/rate' => 'rater#create', :as => 'rate'
+  resources :icos
   resources :currencies
   devise_for :users
-    root 'coins#list'
+    root 'icos#index'
 	get 'home/about'
 	get 'home/lookup'
 	get 'coins/list'
